@@ -58,8 +58,9 @@ h6 {
 .glass-panel {
   background: rgba(20, 25, 22, 0.6);
   /* Dark glass */
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  will-change: transform, backdrop-filter;
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 1.5rem;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
@@ -75,8 +76,9 @@ h6 {
 /* Used sparingly for contrast elements */
 .glass-panel-dark {
   background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  will-change: transform, backdrop-filter;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 1.5rem;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
@@ -84,8 +86,9 @@ h6 {
 
 .glass-nav {
   background: rgba(5, 10, 7, 0.6);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  will-change: transform, backdrop-filter;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
