@@ -72,14 +72,14 @@ const Customers = () => {
                     className="w-full relative py-16 glass-panel border-y border-white/5 mb-24 overflow-hidden flex z-10 shadow-[0_4px_30px_rgba(0,0,0,0.4)]"
                 >
                     <motion.div
-                        animate={{ x: [0, -1035] }} // Adjust width based on content size
+                        animate={{ x: ["0%", "-33.33333333%"] }}
                         transition={{ ease: "linear", duration: 30, repeat: Infinity }}
-                        className="flex whitespace-nowrap gap-24 items-center px-10"
+                        className="flex whitespace-nowrap gap-24 items-center px-10 w-max"
                     >
-                        {/* Double array to create seamless loop */}
+                        {/* Triple array to create perfect seamless loop */}
                         {[...partners, ...partners, ...partners].map((partner, idx) => (
                             <div key={idx} className="flex flex-col items-center justify-center font-bold text-3xl md:text-4xl text-muted-foreground/40 tracking-tight hover:text-foreground transition-all duration-500 cursor-default">
-                                {partner.logoUrl ? (
+                                {partner.logoUrl?.trim() ? (
                                     <img src={partner.logoUrl} alt={partner.name} className="h-10 md:h-12 object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
                                 ) : (
                                     partner.name
