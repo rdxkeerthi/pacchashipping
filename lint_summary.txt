@@ -1,0 +1,51 @@
+C:\Users\admin\Downloads\paccha\src\components\Navbar.jsx
+  Line 3: 'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u.
+  Line 39: Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  37 |
+  38 |     useEffect(() => {
+> 39 |         setIsOpen(false);
+     |         ^^^^^^^^^ Avoid calling setState() directly within an effect
+  40 |     }, [location]);
+  41 |
+  42 |     return (
+C:\Users\admin\Downloads\paccha\src\components\QuickQuoteDrawer.jsx
+  Line 2: 'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u.
+C:\Users\admin\Downloads\paccha\src\components\ThreeDScrollScene.jsx
+  Line 2: 'useFrame' is defined but never used. Allowed unused vars must match /^[A-Z_]/u.
+  Line 4: 'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u.
+  Line 54: 'opacity' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u.
+C:\Users\admin\Downloads\paccha\src\pages\Admin.jsx
+  Line 2: 'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u.
+C:\Users\admin\Downloads\paccha\src\pages\Contact.jsx
+  Line 2: 'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u.
+C:\Users\admin\Downloads\paccha\src\pages\Customers.jsx
+  Line 2: 'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u.
+  Line 11: 'loading' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u.
+C:\Users\admin\Downloads\paccha\src\pages\Home.jsx
+  Line 2: 'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u.
+  Line 48: 'Icon' is defined but never used.
+C:\Users\admin\Downloads\paccha\src\pages\Services.jsx
+  Line 2: 'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u.
+  Line 6: 'Icon' is defined but never used.
+C:\Users\admin\Downloads\paccha\src\pages\Updates.jsx
+  Line 2: 'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u.
+C:\Users\admin\Downloads\paccha\src\pages\services\AirFreight.jsx
+  Line 2: 'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u.
+  Line 21: 'yHero' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u.
+  Line 23: 'cloudsRef' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u.
+C:\Users\admin\Downloads\paccha\src\pages\services\OceanFreight.jsx
+  Line 2: 'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u.
+  Line 20: 'waveRef1' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u.
+  Line 21: 'waveRef2' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u.
+C:\Users\admin\Downloads\paccha\src\pages\services\RoadFreight.jsx
+  Line 2: 'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u.
+  Line 21: 'roadLinesRef' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u.
+C:\Users\admin\Downloads\paccha\src\pages\services\Warehousing.jsx
+  Line 2: 'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u.
