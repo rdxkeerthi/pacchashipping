@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiMapPin, FiPhone, FiMail, FiSend } from 'react-icons/fi';
 import { db } from '../firebase/config';
-import { ref, push, serverTimestamp } from 'firebase/database';
-
+import { ref, push, set, serverTimestamp } from 'firebase/database';
 const Contact = () => {
     const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
     const [status, setStatus] = useState('idle'); // idle, loading, success, error

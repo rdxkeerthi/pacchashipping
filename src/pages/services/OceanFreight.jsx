@@ -67,7 +67,7 @@ const OceanFreight = () => {
                             <div
                                 ref={shipRef}
                                 className="w-full h-full bg-cover bg-center origin-center"
-                                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=2070&auto=format&fit=crop')" }}
+                                style={{ backgroundImage: "url('/shipping_port_containers_1772904872607.png')" }}
                             ></div>
                             <div className="absolute inset-0 bg-gradient-to-t from-[#050a07] via-transparent to-transparent opacity-80"></div>
                             <div className="absolute bottom-6 left-6 flex items-center gap-3">

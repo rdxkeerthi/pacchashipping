@@ -69,7 +69,7 @@ const AirFreight = () => {
                             <div
                                 ref={planeRef}
                                 className="w-full h-full bg-cover bg-center origin-center"
-                                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop')" }}
+                                style={{ backgroundImage: "url('/airport_cargo_board_1772904791588.png')" }}
                             ></div>
                             <div className="absolute inset-0 bg-gradient-to-t from-[#050a07] via-transparent to-transparent opacity-80"></div>
                             <div className="absolute bottom-6 left-6 flex items-center gap-3">
