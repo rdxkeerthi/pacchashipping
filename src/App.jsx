@@ -16,6 +16,7 @@ const AirFreight = lazy(() => import('./pages/services/AirFreight'));
 const OceanFreight = lazy(() => import('./pages/services/OceanFreight'));
 const RoadFreight = lazy(() => import('./pages/services/RoadFreight'));
 const Warehousing = lazy(() => import('./pages/services/Warehousing'));
+const TermsAndConditions = lazy(() => import('./pages/TermsAndConditions'));
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
               <Route path="/customers" element={<Customers />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/admin" element={<Admin />} />
+              <Route path="/terms" element={<TermsAndConditions />} />
             </Routes>
           </Suspense>
         </main>

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pacchashipping.in/sitemap.xml
+
+# Block admin panel from search indexing
+User-agent: *
+Disallow: /admin

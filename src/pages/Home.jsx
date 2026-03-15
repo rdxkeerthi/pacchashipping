@@ -122,8 +122,8 @@ const Home = () => {
                         transition={{ duration: 1, ease: 'easeOut', delay: 0.1 }}
                         className="text-6xl md:text-[9rem] lg:text-[11rem] font-black pb-6 leading-[0.85] tracking-tighter text-white drop-shadow-2xl"
                     >
-                        Your Cargo,<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-highlight to-brand-primary">Delivered.</span>
+                        Logistics,<br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-highlight to-brand-primary">Simplified.</span>
                     </motion.h1>
                     <motion.p
                         initial={{ y: 30, opacity: 0 }}
@@ -211,17 +211,17 @@ const Home = () => {
                 </div>
 
                 <ServiceCard
-                    title="Air Freight Export & Import"
-                    description="Fast, secure air cargo services for time-sensitive shipments. We handle export documentation, customs clearance, and door-to-door delivery for all air freight — from small parcels to oversized cargo across 100+ destinations worldwide."
-                    image="/paccha_air_freight.png"
-                    Icon={FiGlobe}
-                />
-
-                <ServiceCard
                     title="Ocean & Sea Freight"
                     description="Cost-effective FCL and LCL ocean freight solutions connecting India to global markets. We manage all aspects of sea cargo — from port-to-port to door-to-door — with full customs documentation, Bill of Lading, and cargo tracking support."
                     image="/paccha_ocean_freight.png"
                     Icon={FiAnchor}
+                />
+
+                <ServiceCard
+                    title="Air Freight Export & Import"
+                    description="Fast, secure air cargo services for time-sensitive shipments. We handle export documentation, customs clearance, and door-to-door delivery for all air freight — from small parcels to oversized cargo across 100+ destinations worldwide."
+                    image="/paccha_air_freight.png"
+                    Icon={FiGlobe}
                 />
 
                 <ServiceCard

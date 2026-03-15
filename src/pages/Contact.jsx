@@ -67,7 +67,7 @@ const Contact = () => {
             >
                 {[
                     { icon: FiPhone, title: 'Call Us', value: '+91 98413 93916', sub: '+91 9345021647', href: 'tel:+919841393916' },
-                    { icon: FiMail, title: 'Email Us', value: 'lsasudhamani@gmail.com', sub: 'We reply within 24 hours', href: 'mailto:lsasudhamani@gmail.com' },
+                    { icon: FiMail, title: 'Email Us', value: 'admin@pacchashipping.in', sub: 'We reply within 24 hours', href: 'mailto:admin@pacchashipping.in' },
                     { icon: FiClock, title: 'Office Hours', value: 'Mon–Sat: 9:00 AM – 6:30 PM', sub: 'Emergency: 24/7', href: null },
                 ].map(({ icon: Icon, title, value, sub, href }) => (
                     <div key={title} className="glass-panel-dark rounded-[1.5rem] p-6 flex items-center gap-5 border border-white/5 hover:border-brand-primary/30 transition-all duration-300">
@@ -132,7 +132,7 @@ const Contact = () => {
                             </div>
                             <div className="flex-1">
                                 <h4 className="font-bold text-lg text-white mb-1">Email</h4>
-                                <a href="mailto:lsasudhamani@gmail.com" className="text-brand-primary text-[15px] font-semibold hover:text-brand-highlight transition-colors">lsasudhamani@gmail.com</a>
+                                <a href="mailto:admin@pacchashipping.in" className="text-brand-primary text-[15px] font-semibold hover:text-brand-highlight transition-colors">admin@pacchashipping.in</a>
                             </div>
                         </div>
                         <div className="flex gap-6 items-center group">

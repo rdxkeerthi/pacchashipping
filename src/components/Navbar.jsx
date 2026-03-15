@@ -10,8 +10,8 @@ const NavLinks = [
         name: 'Services',
         path: '/services',
         dropdown: [
-            { name: 'Air Freight', path: '/services/air' },
             { name: 'Ocean Freight', path: '/services/ocean' },
+            { name: 'Air Freight', path: '/services/air' },
             { name: 'Road Transport', path: '/services/road' },
             { name: 'Warehousing', path: '/services/warehousing' }
         ]
@@ -19,6 +19,7 @@ const NavLinks = [
     { name: 'Trade News', path: '/updates' },
     { name: 'Our Clients', path: '/customers' },
     { name: 'Contact Us', path: '/contact' },
+    { name: 'Terms', path: '/terms' },
 ];
 
 const Navbar = () => {
@@ -51,9 +52,7 @@ const Navbar = () => {
                 <div className="max-w-[1400px] mx-auto px-6 flex justify-between items-center">
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-3 z-50 group">
-                        <div className="text-brand-primary text-4xl group-hover:text-brand-highlight transition-colors drop-shadow-[0_0_15px_rgba(99,102,241,0.5)]">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon><line x1="12" y1="22" x2="12" y2="15.5"></line><polyline points="22 8.5 12 15.5 2 8.5"></polyline><polyline points="2 15.5 12 8.5 22 15.5"></polyline><line x1="12" y1="2" x2="12" y2="8.5"></line></svg>
-                        </div>
+                        <img src="/paccha_logo.png" alt="Paccha Logo" className="w-12 h-12 object-contain drop-shadow-[0_0_10px_rgba(0,150,200,0.4)] group-hover:scale-110 transition-transform" />
                         <span className="font-bold text-2xl tracking-tighter text-white">
                             PACCHA
                         </span>
