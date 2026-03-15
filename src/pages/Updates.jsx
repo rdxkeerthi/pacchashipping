@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiClock, FiFileText, FiChevronDown, FiTag } from 'react-icons/fi';
 import { db } from '../firebase/config';
@@ -41,6 +42,12 @@ const Updates = () => {
 
     return (
         <div className="w-full min-h-screen pt-24 pb-12 px-4 md:pt-32 md:pb-20 md:px-6 max-w-5xl mx-auto relative bg-background overflow-hidden">
+            <Helmet>
+                <title>Trade & Shipping Updates | Latest Logistics News Paccha Shipping</title>
+                <meta name="description" content="Stay updated with the latest trends in international trade, freight rates, and customs regulations. Important announcements and news from Paccha Universal Shipping Line." />
+                <meta name="keywords" content="logistics news India, shipping updates Chennai, trade announcements, freight rate trends, shipping industry news" />
+                <link rel="canonical" href="https://pacchashipping.in/updates" />
+            </Helmet>
             {/* Background elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
                 <div className="absolute top-[20%] left-[10%] w-[40vw] h-[40vw] rounded-full bg-brand-primary/10 blur-[100px] opacity-60"></div>

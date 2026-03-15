@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiChevronLeft, FiChevronRight, FiStar } from 'react-icons/fi';
 import { db } from '../firebase/config';
@@ -57,6 +58,12 @@ const Customers = () => {
 
     return (
         <div className="w-full min-h-screen pt-24 md:pt-32 pb-12 md:pb-20 overflow-hidden relative bg-[#050a07]">
+            <Helmet>
+                <title>Our Clients & Partners | Trusted Logistics Success Stories Chennai</title>
+                <meta name="description" content="Discover why hundreds of exporters and importers trust Paccha Shipping. Real client testimonials and partner stories from our 15 years in global logistics." />
+                <meta name="keywords" content="logistics testimonials India, trusted shipping company Chennai, Paccha Shipping clients, export import success stories" />
+                <link rel="canonical" href="https://pacchashipping.in/customers" />
+            </Helmet>
             {/* Background elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
                 <div className="absolute top-[20%] right-[10%] w-[40vw] h-[40vw] rounded-full bg-brand-primary/10 blur-[100px] opacity-60"></div>

@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FiArrowRight, FiCheckCircle, FiClock, FiPackage, FiGlobe, FiShield } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,6 +47,12 @@ const AirFreight = () => {
 
     return (
         <div className="min-h-screen bg-[#050a07] pt-32 pb-20 overflow-hidden relative">
+            <Helmet>
+                <title>Air Freight & Cargo Services | Fast Global Shipping Chennai India</title>
+                <meta name="description" content="Express air freight and cargo solutions from Chennai airport. Time-critical worldwide delivery, IATA-compliant handling, and airport customs clearance." />
+                <meta name="keywords" content="air freight Chennai, air cargo India, international air shipping at Chennai, export air cargo, express logistics India" />
+                <link rel="canonical" href="https://pacchashipping.in/services/air" />
+            </Helmet>
             <div className="absolute inset-0 bg-gradient-to-b from-brand-primary/10 via-transparent to-transparent pointer-events-none"></div>
 
             {/* Hero */}

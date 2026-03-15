@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { FiMapPin, FiPhone, FiMail, FiSend, FiClock, FiGlobe } from 'react-icons/fi';
 import { db } from '../firebase/config';
@@ -41,6 +42,12 @@ const Contact = () => {
 
     return (
         <div className="w-full min-h-screen pt-24 pb-12 px-4 md:pt-32 md:pb-20 md:px-6 max-w-[1400px] mx-auto relative bg-transparent">
+            <Helmet>
+                <title>Contact Paccha Shipping | Get a Freight Rate Quote Chennai India</title>
+                <meta name="description" content="Contact our logistics experts in Chennai for freight rates, customs assistance, and export-import documentation. Get a free quote for ocean, air, or road transport." />
+                <meta name="keywords" content="contact logistics company Chennai, freight quote India, shipping inquiry Chennai, Paccha Shipping contact, export import assistance" />
+                <link rel="canonical" href="https://pacchashipping.in/contact" />
+            </Helmet>
 
             {/* Page Header */}
             <motion.div

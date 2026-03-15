@@ -1,6 +1,7 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { FiBox, FiGlobe, FiTarget, FiTrendingUp, FiSettings, FiArrowRight, FiTruck, FiShield, FiAnchor, FiFileText, FiPackage, FiAlertTriangle } from 'react-icons/fi';
+import { FiBox, FiGlobe, FiTrendingUp, FiSettings, FiArrowRight, FiTruck, FiShield, FiAnchor, FiFileText, FiPackage, FiAlertTriangle } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ icon: Icon, title, desc, delay, imgSrc, to, badge }) => (
@@ -38,6 +39,12 @@ const ServiceCard = ({ icon: Icon, title, desc, delay, imgSrc, to, badge }) => (
 const Services = () => {
     return (
         <div className="w-full min-h-screen pt-32 pb-24 px-6 max-w-[1400px] mx-auto relative overflow-hidden bg-transparent">
+            <Helmet>
+                <title>Export Import & Logistics Services | Paccha Shipping India</title>
+                <meta name="description" content="Explore our full suite of logistics services: Ocean Freight, Air Freight, Road Transport, Customs Clearance, Warehousing, and Documentation. Licensed and global solutions." />
+                <meta name="keywords" content="logistics services India, freight forwarding solutions, export import services Chennai, global trade logistics, Paccha Shipping services" />
+                <link rel="canonical" href="https://pacchashipping.in/services" />
+            </Helmet>
             {/* Background Accent */}
             <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-b from-brand-primary/10 to-transparent blur-3xl pointer-events-none"></div>
 
@@ -144,7 +151,7 @@ const Services = () => {
                     icon={FiTrendingUp}
                     title="Supply Chain Consulting"
                     desc="We help businesses optimize their international trade operations — recommending the most cost-effective shipping modes, trade lanes, incoterms, and customs strategies. Ideal for companies starting or scaling global exports and imports."
-                    delay={1.0}
+                    delay={1}
                     to="/contact"
                 />
             </div>

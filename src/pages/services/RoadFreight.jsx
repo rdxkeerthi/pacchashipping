@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FiArrowRight, FiCheckCircle, FiTruck, FiMapPin, FiClock, FiShield } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,6 +46,12 @@ const RoadFreight = () => {
 
     return (
         <div className="min-h-screen bg-[#050a07] pt-32 pb-20 overflow-hidden relative">
+            <Helmet>
+                <title>Road Freight & Inland Transport | PAN India Logistics Chennai</title>
+                <meta name="description" content="Reliable container trucking and inland road transport across India. Port haulage, factory stuffing, and GPS-tracked fleet for safe cargo delivery." />
+                <meta name="keywords" content="road freight India, container trucking Chennai, inland transport Chennai, port haulage India, logistics trucking Chennai" />
+                <link rel="canonical" href="https://pacchashipping.in/services/road" />
+            </Helmet>
             <div className="absolute inset-0 bg-gradient-to-b from-brand-primary/10 via-transparent to-transparent pointer-events-none"></div>
 
             {/* Hero */}

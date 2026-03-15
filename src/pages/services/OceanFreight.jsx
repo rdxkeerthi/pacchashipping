@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FiArrowRight, FiCheckCircle, FiAnchor, FiPackage, FiGlobe, FiFileText } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,6 +47,12 @@ const OceanFreight = () => {
 
     return (
         <div className="min-h-screen bg-[#050a07] pt-32 pb-20 overflow-hidden relative">
+            <Helmet>
+                <title>Ocean Freight FCL LCL Shipping | Global Sea Freight Services Chennai India</title>
+                <meta name="description" content="Cost-effective FCL and LCL ocean freight solutions from Chennai to global ports. Expert container shipping, Bill of Lading documentation, and port-to-door delivery." />
+                <meta name="keywords" content="ocean freight Chennai, sea freight India, FCL shipping, LCL shipping Chennai, container shipping India, shipping company Tamil Nadu" />
+                <link rel="canonical" href="https://pacchashipping.in/services/ocean" />
+            </Helmet>
             <div className="absolute inset-0 bg-gradient-to-b from-brand-primary/10 via-transparent to-transparent pointer-events-none"></div>
 
             {/* Hero */}

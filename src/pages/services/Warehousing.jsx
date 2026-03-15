@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FiArrowRight, FiCheckCircle, FiBox, FiPackage, FiShield, FiTrendingUp } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,6 +41,12 @@ const Warehousing = () => {
 
     return (
         <div className="min-h-screen bg-[#050a07] pt-32 pb-20 overflow-hidden relative">
+            <Helmet>
+                <title>Secure Warehousing & Distribution | Bonded Storage Chennai India</title>
+                <meta name="description" content="Bonded and non-bonded warehousing near Chennai seaport and airport. Experts in inventory management, cargo consolidation, and last-mile distribution." />
+                <meta name="keywords" content="warehousing Chennai, bonded storage India, cargo consolidation Chennai, logistics warehouse Chennai, export hub storage" />
+                <link rel="canonical" href="https://pacchashipping.in/services/warehousing" />
+            </Helmet>
             <div className="absolute inset-0 bg-gradient-to-b from-brand-primary/10 via-transparent to-transparent pointer-events-none"></div>
 
             {/* Hero */}

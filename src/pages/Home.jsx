@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { FiArrowRight, FiGlobe, FiTruck, FiAnchor, FiPackage, FiCheckCircle, FiShield, FiClock, FiStar } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -96,6 +97,48 @@ const Home = () => {
 
     return (
         <div className="w-full relative bg-transparent min-h-screen">
+            <Helmet>
+                <title>Paccha Shipping | Best Export Import & Logistics Company in Chennai India</title>
+                <meta name="description" content="Paccha Universal Shipping Line — India's leading export import company in Chennai. Specialists in Ocean Freight, Air Freight, Customs Clearance, and Global Logistics. Partner with us for seamless international trade since 2009." />
+                <meta name="keywords" content="export import company Chennai, logistics solutions India, freight forwarding Chennai, international shipping India, customs clearance agent, sea freight Chennai, air cargo India, Paccha Shipping" />
+                <link rel="canonical" href="https://pacchashipping.in/" />
+
+                {/* FAQ Structured Data for Rich Snippets */}
+                <script type="application/ld+json">
+                    {`
+                {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "What services does Paccha Shipping provide?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Paccha Shipping provides comprehensive logistics solutions including Ocean Freight (FCL/LCL), Air Freight, Road Transport, Customs Clearance, Warehousing, and Export-Import documentation."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Where is Paccha Shipping located?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Our headquarters is located in Chennai, Tamil Nadu, India, serving global trade routes across 50+ countries."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Does Paccha Shipping handle customs clearance?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes, we are a licensed Custom House Agent (CHA) providing expert import and export clearance services at all major ports and airports."
+                            }
+                        }
+                    ]
+                }
+                `}
+                </script>
+            </Helmet>
 
             {/* FULL SCREEN VIDEO BACKGROUND */}
             <div className="fixed inset-0 w-full h-[100vh] z-[-1] pointer-events-none">
