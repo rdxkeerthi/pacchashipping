@@ -70,12 +70,12 @@ const Customers = () => {
                 variants={revealVariants}
                 className="max-w-[1400px] mx-auto px-6 text-center mb-20 relative z-10"
             >
-                <span className="text-brand-highlight tracking-widest uppercase text-sm font-bold mb-4 block">Enterprise Ecosystem</span>
+                <span className="text-brand-highlight tracking-widest uppercase text-sm font-bold mb-4 block">Our Clients & Partners</span>
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
-                    Global Scale.<br />Trusted Integrity.
+                    Trusted by Businesses.<br />Loved by Exporters.
                 </h1>
                 <p className="max-w-3xl mx-auto text-gray-400 text-xl font-medium leading-relaxed">
-                    Powering the resilient supply chains of industry titans across aerospace, energy, high-tech hardware, and global retail.
+                    From small exporters to large corporations — businesses across India trust Paccha Universal Shipping Line to handle their most critical cargo. Here's what our clients say.
                 </p>
             </motion.div>
 
@@ -106,6 +106,17 @@ const Customers = () => {
                         ))}
                     </motion.div>
                 </motion.div>
+            )}
+
+            {/* Empty state if no partners and no testimonials */}
+            {!loading && partners.length === 0 && testimonials.length === 0 && (
+                <div className="max-w-[1400px] mx-auto px-6 text-center py-32 relative z-10">
+                    <div className="w-20 h-20 rounded-full bg-white/5 flex items-center justify-center text-4xl text-gray-500 mx-auto mb-6">
+                        <FiStar />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-3">Our Client Stories Coming Soon</h3>
+                    <p className="text-gray-500 text-lg max-w-xl mx-auto">We're proud to serve hundreds of exporters and importers. Contact us to learn about our client success stories and how we can help your business go global.</p>
+                </div>
             )}
 
             {/* Testimonial Carousel */}

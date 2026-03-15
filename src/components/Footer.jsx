@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiPhone, FiMail, FiMapPin, FiLinkedin, FiFacebook, FiInstagram, FiGlobe } from 'react-icons/fi';
+import { FiPhone, FiMail, FiMapPin, FiLinkedin, FiFacebook, FiInstagram, FiTwitter } from 'react-icons/fi';
 
 const Footer = () => {
     return (
@@ -13,22 +13,27 @@ const Footer = () => {
                         <div className="text-brand-primary text-4xl group-hover:text-brand-highlight transition-colors drop-shadow-[0_0_15px_rgba(99,102,241,0.5)]">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon><line x1="12" y1="22" x2="12" y2="15.5"></line><polyline points="22 8.5 12 15.5 2 8.5"></polyline><polyline points="2 15.5 12 8.5 22 15.5"></polyline><line x1="12" y1="2" x2="12" y2="8.5"></line></svg>
                         </div>
-                        <span className="font-bold text-2xl tracking-tighter text-white">
-                            PACCHA
-                        </span>
+                        <div>
+                            <span className="font-bold text-2xl tracking-tighter text-white block">PACCHA</span>
+                            <span className="text-xs text-gray-500 tracking-wider">Universal Shipping Line</span>
+                        </div>
                     </Link>
-                    <p className="text-gray-400 text-[15px] mb-8 max-w-xs leading-relaxed font-medium">
-                        Paccha Universal Shipping Line Private Limited. High Performance, Cargo Delivered with precision.
+                    <p className="text-gray-400 text-[15px] mb-4 max-w-xs leading-relaxed font-medium">
+                        Paccha Universal Shipping Line Pvt. Ltd. — Your trusted export-import and freight forwarding partner since 2009. Chennai, India.
                     </p>
+                    <p className="text-gray-500 text-xs mb-6">IEC Holder · Custom License Holder · DGFT Registered</p>
                     <div className="flex gap-4">
-                        <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-primary transition-colors duration-300">
+                        <a href="#" aria-label="Facebook" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-primary transition-colors duration-300">
                             <FiFacebook />
                         </a>
-                        <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-primary transition-colors duration-300">
+                        <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-primary transition-colors duration-300">
                             <FiInstagram />
                         </a>
-                        <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-primary transition-colors duration-300">
+                        <a href="#" aria-label="LinkedIn" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-primary transition-colors duration-300">
                             <FiLinkedin />
+                        </a>
+                        <a href="#" aria-label="Twitter" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-primary transition-colors duration-300">
+                            <FiTwitter />
                         </a>
                     </div>
                 </div>
@@ -37,23 +42,24 @@ const Footer = () => {
                 <div>
                     <h4 className="font-bold text-lg mb-6 text-white">Quick Links</h4>
                     <ul className="flex flex-col gap-4 text-[15px] text-gray-400 font-medium">
-                        <li><Link to="/services" className="hover:text-white transition-colors">Services</Link></li>
-                        <li><Link to="/updates" className="hover:text-white transition-colors">Latest News</Link></li>
-                        <li><Link to="/customers" className="hover:text-white transition-colors">Customers</Link></li>
+                        <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
+                        <li><Link to="/services" className="hover:text-white transition-colors">Our Services</Link></li>
+                        <li><Link to="/updates" className="hover:text-white transition-colors">Trade News</Link></li>
+                        <li><Link to="/customers" className="hover:text-white transition-colors">Our Clients</Link></li>
                         <li><Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
-                        <li><Link to="/admin" className="hover:text-white transition-colors">Admin Panel</Link></li>
                     </ul>
                 </div>
 
                 {/* Services */}
                 <div>
-                    <h4 className="font-bold text-lg mb-6 text-white">Services</h4>
+                    <h4 className="font-bold text-lg mb-6 text-white">Our Services</h4>
                     <ul className="flex flex-col gap-4 text-[15px] text-gray-400 font-medium">
-                        <li><Link to="/services/air" className="hover:text-white transition-colors">Air Freight</Link></li>
-                        <li><Link to="/services/ocean" className="hover:text-white transition-colors">Ocean Freight</Link></li>
-                        <li><Link to="/services/road" className="hover:text-white transition-colors">Road Transport</Link></li>
-                        <li><Link to="/services/warehousing" className="hover:text-white transition-colors">Warehousing</Link></li>
+                        <li><Link to="/services/air" className="hover:text-white transition-colors">Air Freight Export & Import</Link></li>
+                        <li><Link to="/services/ocean" className="hover:text-white transition-colors">Ocean & Sea Freight (FCL/LCL)</Link></li>
+                        <li><Link to="/services/road" className="hover:text-white transition-colors">Road & Inland Transport</Link></li>
+                        <li><Link to="/services/warehousing" className="hover:text-white transition-colors">Warehousing & Distribution</Link></li>
                         <li><Link to="/services" className="hover:text-white transition-colors">Customs Clearance</Link></li>
+                        <li><Link to="/services" className="hover:text-white transition-colors">Cargo Insurance</Link></li>
                     </ul>
                 </div>
 
@@ -71,13 +77,16 @@ const Footer = () => {
                             <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-brand-highlight shrink-0">
                                 <FiPhone />
                             </div>
-                            <span>+91 98413 93916 / +91 9345021647</span>
+                            <div>
+                                <a href="tel:+919841393916" className="block hover:text-white transition-colors">+91 98413 93916</a>
+                                <a href="tel:+919345021647" className="block hover:text-white transition-colors">+91 9345021647</a>
+                            </div>
                         </li>
                         <li className="flex gap-4 items-center">
                             <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-brand-highlight shrink-0">
                                 <FiMail />
                             </div>
-                            <span>lsasudhamani@gmail.com</span>
+                            <a href="mailto:lsasudhamani@gmail.com" className="hover:text-white transition-colors">lsasudhamani@gmail.com</a>
                         </li>
                     </ul>
                 </div>
@@ -88,6 +97,7 @@ const Footer = () => {
                 <div className="flex gap-8">
                     <Link to="#" className="hover:text-white transition-colors">Privacy Policy</Link>
                     <Link to="#" className="hover:text-white transition-colors">Terms of Service</Link>
+                    <Link to="#" className="hover:text-white transition-colors">Sitemap</Link>
                 </div>
             </div>
         </footer>

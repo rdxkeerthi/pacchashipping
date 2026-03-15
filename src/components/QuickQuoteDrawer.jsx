@@ -40,7 +40,10 @@ const QuickQuoteDrawer = ({ isOpen, onClose }) => {
                         className="fixed top-0 right-0 h-full w-full max-w-md z-50 p-8 bg-white border-l border-black/5 rounded-none overflow-y-auto shadow-2xl"
                     >
                         <div className="flex justify-between items-center mb-10">
-                            <h2 className="text-2xl font-bold text-[#1D1D1F]">Request Quick Quote</h2>
+                            <div>
+                            <h2 className="text-2xl font-bold text-[#1D1D1F]">Get a Free Quote</h2>
+                            <p className="text-[#86868B] text-sm mt-1">Our team responds within a few hours.</p>
+                        </div>
                             <button
                                 onClick={onClose}
                                 className="p-2 rounded-full bg-[#F5F5F7] text-[#1D1D1F] hover:bg-[#E5E5EA] transition-colors"

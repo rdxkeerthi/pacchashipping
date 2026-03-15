@@ -2,35 +2,43 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { FiArrowRight, FiCheckCircle } from 'react-icons/fi';
+import { FiArrowRight, FiCheckCircle, FiTruck, FiMapPin, FiClock, FiShield } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const features = [
-    "FTL & LTL Services",
-    "Cross-Border Transport",
-    "Last-Mile Delivery",
-    "Real-time Fleet Tracking",
-    "Heavy Haulage",
-    "Dedicated Contract Carriage"
+    "Port Haulage & Container Trucking",
+    "Factory Stuffing & De-stuffing",
+    "Over-Dimensional Cargo Transport",
+    "CFS / ICD Movement",
+    "Multimodal Transport Solutions",
+    "Cross-Border Road Freight",
+    "Door-to-Door Inland Delivery",
+    "GPS-Tracked Fleet",
+];
+
+const vehicleTypes = [
+    { type: '20ft Container Truck', desc: 'For standard containers from port or ICD to factory/warehouse.' },
+    { type: '40ft Container Trailer', desc: 'High-capacity trailer for larger FCL containers.' },
+    { type: 'Flat Bed / Low Bed', desc: 'For oversized and over-dimensional cargo, machinery, and project equipment.' },
+    { type: 'Mini Truck / LCV', desc: 'For last-mile delivery of smaller consignments within city limits.' },
+    { type: 'Refrigerated Van', desc: 'Cold chain transport for perishables, pharmaceuticals, and temperature-sensitive cargo.' },
+    { type: 'Tanker', desc: 'For bulk liquid cargo, chemicals, and food-grade liquids.' },
 ];
 
 const RoadFreight = () => {
     const truckRef = useRef(null);
-    const roadLinesRef = useRef(null);
 
     useEffect(() => {
-        // Image cinematic panning
         gsap.to(truckRef.current, {
-            scale: 1.15,
+            scale: 1.1,
             x: 20,
-            y: 10,
             scrollTrigger: {
                 trigger: ".road-hero",
                 start: "top top",
                 end: "bottom top",
-                scrub: 0.5
+                scrub: 1
             }
         });
     }, []);
@@ -39,77 +47,107 @@ const RoadFreight = () => {
         <div className="min-h-screen bg-[#050a07] pt-32 pb-20 overflow-hidden relative">
             <div className="absolute inset-0 bg-gradient-to-b from-brand-primary/10 via-transparent to-transparent pointer-events-none"></div>
 
+            {/* Hero */}
             <section className="road-hero relative max-w-7xl mx-auto px-6 mb-32 z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <span className="text-brand-highlight tracking-widest uppercase text-sm font-bold mb-4 block">Overland Logistics</span>
+                    <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
+                        <span className="text-brand-highlight tracking-widest uppercase text-sm font-bold mb-4 block">Road & Inland Transport</span>
                         <h1 className="text-5xl md:text-7xl font-heading font-extrabold pb-4 text-white drop-shadow-lg">
-                            The Arteries of <br />
-                            <span className="text-gradient">Commerce.</span>
+                            Reliable Road<br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-highlight to-brand-primary">Logistics.</span>
                         </h1>
-                        <p className="text-xl text-gray-300 max-w-lg mb-8 font-light">
-                            Seamless domestic and cross-border road transit. From first mile to last, our network delivers with unyielding reliability.
+                        <p className="text-xl text-gray-300 max-w-lg mb-8 font-light leading-relaxed">
+                            From port to factory, city to city, and cross-border — our road freight services ensure your cargo moves safely and on schedule across India and beyond.
                         </p>
-                        <Link to="/contact" className="px-8 py-4 rounded-full bg-[var(--color-brand-light)] text-[var(--color-brand-dark)] hover:bg-[var(--color-brand-accent)] hover:shadow-[0_0_30px_rgba(0,240,255,0.4)] transition-all font-bold text-lg inline-flex items-center gap-2">
-                            Request Road Quote <FiArrowRight />
-                        </Link>
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <Link to="/contact" className="px-8 py-4 rounded-full bg-brand-primary text-white hover:bg-brand-highlight transition-all font-bold text-lg inline-flex items-center gap-2 hover:-translate-y-1">
+                                Request Road Transport Quote <FiArrowRight />
+                            </Link>
+                            <a href="tel:+919841393916" className="px-8 py-4 rounded-full border border-white/20 text-white hover:border-brand-primary/60 transition-all font-bold text-lg inline-flex items-center gap-2 hover:-translate-y-1">
+                                Call: +91 98413 93916
+                            </a>
+                        </div>
                     </motion.div>
 
                     <div className="relative h-[400px] md:h-[500px] w-full mt-12 lg:mt-0">
-                        <div className="absolute inset-0 overflow-hidden rounded-3xl glass-panel-dark border border-[var(--color-brand-highlight)]/30 shadow-[0_0_40px_rgba(99,102,241,0.2)]">
+                        <div className="absolute inset-0 overflow-hidden rounded-3xl glass-panel-dark border border-brand-highlight/30 shadow-[0_0_40px_rgba(99,102,241,0.2)]">
                             <div
                                 ref={truckRef}
                                 className="w-full h-full bg-cover bg-center origin-center"
-                                style={{ backgroundImage: "url('/logistics_truck_highway_1772904827988.png')" }}
+                                style={{ backgroundImage: "url('/paccha_road_freight.png')" }}
                             ></div>
                             <div className="absolute inset-0 bg-gradient-to-t from-[#050a07] via-transparent to-transparent opacity-80"></div>
                             <div className="absolute bottom-6 left-6 flex items-center gap-3">
-                                <div className="w-3 h-3 rounded-full bg-brand-highlight animate-pulse shadow-neon-brand"></div>
-                                <span className="text-white font-bold text-sm tracking-widest uppercase">Live Track: Convoy Delta-2</span>
+                                <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse"></div>
+                                <span className="text-white font-bold text-sm tracking-widest uppercase">GPS Tracked Fleet · On Route</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section className="max-w-7xl mx-auto px-6 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-                    <div>
-                        <h2 className="text-3xl font-heading font-bold mb-6 text-white">Drive Your Business Forward</h2>
-                        <p className="text-gray-400 mb-8 leading-relaxed">
-                            Our comprehensive overland network guarantees secure and timely deliveries. With a diverse fleet and advanced telematics, we provide end-to-end visibility for every mile your cargo travels.
-                        </p>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            {features.map((feature, idx) => (
-                                <div key={idx} className="flex items-center gap-3 text-gray-300">
-                                    <FiCheckCircle className="text-[var(--color-brand-highlight)] text-xl shrink-0" />
-                                    <span className="text-sm font-medium">{feature}</span>
-                                </div>
-                            ))}
+            {/* Features */}
+            <section className="max-w-7xl mx-auto px-6 relative z-10 mb-24">
+                <h2 className="text-3xl font-bold text-white mb-8">Our Road Logistics Capabilities</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+                    {features.map((feature, idx) => (
+                        <div key={idx} className="flex items-center gap-3 text-gray-300 p-4 bg-white/5 rounded-xl border border-white/5 hover:border-brand-primary/30 transition-all">
+                            <FiCheckCircle className="text-brand-primary text-xl shrink-0" />
+                            <span className="text-sm font-medium">{feature}</span>
                         </div>
-                    </div>
+                    ))}
+                </div>
 
-                    <div className="grid grid-cols-2 gap-4">
-                        <div className="glass-panel p-6 flex flex-col justify-center items-center text-center">
-                            <span className="text-5xl font-heading font-bold text-[var(--color-brand-accent)] mb-2 drop-shadow-[0_0_15px_rgba(0,240,255,0.5)]">FTL/LTL</span>
-                            <span className="text-gray-400 text-sm font-medium uppercase tracking-wider">Flexible Scaling</span>
-                        </div>
-                        <div className="glass-panel p-6 flex flex-col justify-center items-center text-center">
-                            <span className="text-5xl font-heading font-bold text-[var(--color-brand-highlight)] mb-2 drop-shadow-[0_0_15px_rgba(99,102,241,0.5)]">GPS</span>
-                            <span className="text-gray-400 text-sm font-medium uppercase tracking-wider">Live Tracking</span>
-                        </div>
-                        <div className="glass-panel-dark col-span-2 p-6 flex items-center justify-between border-l-4 border-white">
-                            <div>
-                                <h4 className="text-white font-bold text-lg">Specialized Transport</h4>
-                                <p className="text-gray-500 text-sm">Refrigerated, Hazmat, and Oversized freight experts.</p>
-                            </div>
-                            <FiArrowRight className="text-white text-3xl" />
-                        </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="glass-panel p-6 rounded-2xl text-center">
+                        <FiClock className="text-brand-highlight text-4xl mx-auto mb-3" />
+                        <span className="text-3xl font-bold text-brand-highlight block mb-1">24/7</span>
+                        <span className="text-gray-400 text-sm uppercase tracking-wider">Fleet Availability</span>
                     </div>
+                    <div className="glass-panel p-6 rounded-2xl text-center">
+                        <FiMapPin className="text-brand-primary text-4xl mx-auto mb-3" />
+                        <span className="text-3xl font-bold text-brand-primary block mb-1">PAN India</span>
+                        <span className="text-gray-400 text-sm uppercase tracking-wider">Delivery Coverage</span>
+                    </div>
+                    <div className="glass-panel p-6 rounded-2xl text-center">
+                        <FiShield className="text-brand-highlight text-4xl mx-auto mb-3" />
+                        <span className="text-3xl font-bold text-brand-highlight block mb-1">Insured</span>
+                        <span className="text-gray-400 text-sm uppercase tracking-wider">Transit Coverage</span>
+                    </div>
+                </div>
+            </section>
+
+            {/* Vehicle Types */}
+            <section className="max-w-7xl mx-auto px-6 relative z-10 mb-24">
+                <h2 className="text-3xl font-bold text-white mb-8">Our Fleet & Vehicle Types</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {vehicleTypes.map(({ type, desc }) => (
+                        <motion.div
+                            key={type}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                            className="glass-panel-dark rounded-2xl p-6 border border-white/5 hover:border-brand-primary/30 transition-all"
+                        >
+                            <div className="w-12 h-12 rounded-xl bg-brand-primary/15 flex items-center justify-center text-brand-primary text-xl mb-4">
+                                <FiTruck />
+                            </div>
+                            <h3 className="text-lg font-bold text-white mb-2">{type}</h3>
+                            <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
+                        </motion.div>
+                    ))}
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section className="max-w-7xl mx-auto px-6 relative z-10">
+                <div className="bg-gradient-to-br from-brand-primary/20 to-black/40 border border-brand-primary/30 rounded-[2rem] p-12 text-center">
+                    <h3 className="text-3xl md:text-4xl font-black text-white mb-4">Need Inland Transport?</h3>
+                    <p className="text-gray-300 text-lg mb-8 max-w-xl mx-auto">Our road freight team will arrange the right vehicle for your cargo — from a single container movement to a full fleet deployment.</p>
+                    <Link to="/contact" className="inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-highlight text-white font-bold px-10 py-4 rounded-full transition-all hover:-translate-y-1">
+                        Get a Transport Quote <FiArrowRight />
+                    </Link>
                 </div>
             </section>
         </div>

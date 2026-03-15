@@ -16,9 +16,9 @@ const NavLinks = [
             { name: 'Warehousing', path: '/services/warehousing' }
         ]
     },
-    { name: 'Updates', path: '/updates' },
-    { name: 'Customers', path: '/customers' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Trade News', path: '/updates' },
+    { name: 'Our Clients', path: '/customers' },
+    { name: 'Contact Us', path: '/contact' },
 ];
 
 const Navbar = () => {
@@ -98,7 +98,7 @@ const Navbar = () => {
                             onClick={() => setIsQuoteOpen(true)}
                             className="px-6 py-2.5 rounded-full bg-brand-primary text-white hover:bg-brand-highlight hover:shadow-neon-brand hover:-translate-y-0.5 transition-all font-semibold text-sm flex items-center gap-2"
                         >
-                            Get Quote
+                            Free Quote
                         </button>
                     </div>
 
@@ -163,7 +163,7 @@ const Navbar = () => {
                             }}
                             className="mt-6 px-10 py-4 rounded-full bg-brand-primary text-white font-bold text-xl shadow-lg hover:shadow-neon-brand transition-all"
                         >
-                            Get Quote
+                            Get Free Quote
                         </motion.button>
                     </motion.div>
                 )}
