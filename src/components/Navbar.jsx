@@ -19,7 +19,6 @@ const NavLinks = [
     { name: 'Trade News', path: '/updates' },
     { name: 'Our Clients', path: '/customers' },
     { name: 'Contact Us', path: '/contact' },
-    { name: 'Terms', path: '/terms' },
 ];
 
 const Navbar = () => {
@@ -52,7 +51,7 @@ const Navbar = () => {
                 <div className="max-w-[1400px] mx-auto px-6 flex justify-between items-center">
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-3 z-50 group">
-                        <img src="/paccha_logo.png" alt="Paccha Logo" className="w-12 h-12 object-contain drop-shadow-[0_0_10px_rgba(0,150,200,0.4)] group-hover:scale-110 transition-transform" />
+                        <img src="/paccha_logo.png" alt="Paccha Shipping Logo" className="w-11 h-11 rounded-full object-cover border-2 border-white/20 shadow-lg group-hover:scale-110 transition-transform" />
                         <span className="font-bold text-2xl tracking-tighter text-white">
                             PACCHA
                         </span>

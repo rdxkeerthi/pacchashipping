@@ -172,7 +172,7 @@ const Home = () => {
                         <div>
                             <span className="text-brand-highlight tracking-widest uppercase text-sm font-bold mb-6 block">About Paccha Shipping</span>
                             <h2 className="text-5xl md:text-7xl font-black text-white tracking-tight leading-[1] mb-8">
-                                Moving Trade.<br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-highlight to-brand-primary">Connecting Worlds.</span>
+                                Moving Trade.<br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-highlight to-brand-primary">Connecting Worldwide.</span>
                             </h2>
                             <p className="text-gray-300 text-lg leading-relaxed mb-6">
                                 Paccha Universal Shipping Line Private Limited is a full-service export-import and logistics company headquartered in Chennai, India. Since 2009, we have been facilitating seamless international trade for businesses of all sizes — from SMEs to large corporations.
