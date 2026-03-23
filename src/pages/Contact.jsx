@@ -47,6 +47,16 @@ const Contact = () => {
                 <meta name="description" content="Contact our logistics experts in Chennai for freight rates, customs assistance, and export-import documentation. Get a free quote for ocean, air, or road transport." />
                 <meta name="keywords" content="contact logistics company Chennai, freight quote India, shipping inquiry Chennai, Paccha Shipping contact, export import assistance" />
                 <link rel="canonical" href="https://pacchashipping.in/contact" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://pacchashipping.in/contact" />
+                <meta property="og:title" content="Contact Paccha Shipping | Get a Freight Rate Quote" />
+                <meta property="og:description" content="Contact our Chennai logistics headquarters for ocean freight, air cargo, and customs clearance quotes." />
+                <meta property="og:image" content="https://pacchashipping.in/paccha_ocean_freight.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Contact Paccha Shipping | Get a Freight Rate Quote" />
+                <meta name="twitter:description" content="Get a free freight quote today. Ocean, Air, and Road transport solutions." />
+                <meta name="twitter:image" content="https://pacchashipping.in/paccha_ocean_freight.png" />
+                <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Where is Paccha Shipping located?","acceptedAnswer":{"@type":"Answer","text":"Our headquarters is located at #12/460, F1 M.T.H Road, Chennai, Tamil Nadu 600099, India."}},{"@type":"Question","name":"How can I get a freight quote?","acceptedAnswer":{"@type":"Answer","text":"You can get a free quote by filling out the contact form on our website, calling us at +91 98413 93916, or emailing admin@pacchashipping.in."}},{"@type":"Question","name":"What are your operating hours?","acceptedAnswer":{"@type":"Answer","text":"Our office is open Monday to Friday from 9:00 AM to 6:00 PM (IST). However, our operations team provides 24/7 support for active shipments."}}]}`}</script>
             </Helmet>
 
             {/* Page Header */}

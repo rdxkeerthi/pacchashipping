@@ -48,10 +48,21 @@ const AirFreight = () => {
     return (
         <div className="min-h-screen bg-[#050a07] pt-32 pb-20 overflow-hidden relative">
             <Helmet>
-                <title>Air Freight & Cargo Services | Fast Global Shipping Chennai India</title>
-                <meta name="description" content="Express air freight and cargo solutions from Chennai airport. Time-critical worldwide delivery, IATA-compliant handling, and airport customs clearance." />
-                <meta name="keywords" content="air freight Chennai, air cargo India, international air shipping at Chennai, export air cargo, express logistics India" />
+                <title>Air Freight &amp; Cargo Services | Fast Global Shipping Chennai India</title>
+                <meta name="description" content="Express air freight and cargo solutions from Chennai airport. Time-critical worldwide delivery to 100+ countries, IATA-compliant handling, and customs clearance. Get a free air freight quote." />
+                <meta name="keywords" content="air freight Chennai, air cargo India, express air shipping Chennai, export air cargo India, air freight forwarder Tamil Nadu, international air cargo Chennai airport" />
                 <link rel="canonical" href="https://pacchashipping.in/services/air" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://pacchashipping.in/services/air" />
+                <meta property="og:title" content="Air Freight from Chennai | Fast Global Air Cargo | Paccha Shipping" />
+                <meta property="og:description" content="Fast, IATA-compliant air cargo to 100+ global destinations from Chennai. Door-to-door, customs clearance, DG handling." />
+                <meta property="og:image" content="https://pacchashipping.in/paccha_air_freight.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Air Freight from Chennai | Paccha Shipping" />
+                <meta name="twitter:description" content="Fast air cargo from Chennai to 100+ destinations. IATA-compliant, customs cleared, door-to-door." />
+                <meta name="twitter:image" content="https://pacchashipping.in/paccha_air_freight.png" />
+                <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"Service","name":"Air Freight Export and Import","serviceType":"Air Cargo","provider":{"@type":"LocalBusiness","name":"Paccha Universal Shipping Line Pvt Ltd","url":"https://pacchashipping.in","telephone":"+91-98413-93916","address":{"@type":"PostalAddress","addressLocality":"Chennai","addressRegion":"Tamil Nadu","postalCode":"600099","addressCountry":"IN"}},"areaServed":["India","United Arab Emirates","Singapore","United Kingdom","United States","Germany"],"description":"IATA-compliant air freight and express cargo services from Chennai International Airport to 100+ global destinations."}`}</script>
+                <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does air freight from Chennai take?","acceptedAnswer":{"@type":"Answer","text":"Chennai to Dubai is 1-2 days, Chennai to Europe is 2-3 days, Chennai to USA is 3-5 days."}},{"@type":"Question","name":"Can Paccha Shipping handle dangerous goods by air?","acceptedAnswer":{"@type":"Answer","text":"Yes, our team is trained in IATA Dangerous Goods Regulations and can handle DG cargo by air with proper documentation."}},{"@type":"Question","name":"What documents are needed for air freight export from India?","acceptedAnswer":{"@type":"Answer","text":"Key documents include the Air Waybill (AWB), Commercial Invoice, Packing List, Shipping Bill, IEC, and any commodity-specific permits."}},{"@type":"Question","name":"Does Paccha Shipping offer door-to-door air freight service?","acceptedAnswer":{"@type":"Answer","text":"Yes, we offer complete door-to-door air freight including factory pickup, export customs, airline booking, import clearance, and last-mile delivery."}}]}`}</script>
             </Helmet>
             <div className="absolute inset-0 bg-gradient-to-b from-brand-primary/10 via-transparent to-transparent pointer-events-none"></div>
 

@@ -47,10 +47,21 @@ const RoadFreight = () => {
     return (
         <div className="min-h-screen bg-[#050a07] pt-32 pb-20 overflow-hidden relative">
             <Helmet>
-                <title>Road Freight & Inland Transport | PAN India Logistics Chennai</title>
+                <title>Road Freight &amp; Inland Transport | PAN India Logistics Chennai</title>
                 <meta name="description" content="Reliable container trucking and inland road transport across India. Port haulage, factory stuffing, and GPS-tracked fleet for safe cargo delivery." />
                 <meta name="keywords" content="road freight India, container trucking Chennai, inland transport Chennai, port haulage India, logistics trucking Chennai" />
                 <link rel="canonical" href="https://pacchashipping.in/services/road" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://pacchashipping.in/services/road" />
+                <meta property="og:title" content="Road Freight &amp; Inland Transport | Paccha Shipping" />
+                <meta property="og:description" content="Reliable PAN India road transport, container trucking, and port haulage. GPS-tracked fleet for secure cargo movement." />
+                <meta property="og:image" content="https://pacchashipping.in/paccha_road_freight.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Road Freight &amp; Inland Transport | Paccha Shipping" />
+                <meta name="twitter:description" content="PAN India road transport, container trucking, and port haulage. Secure, GPS-tracked fleet." />
+                <meta name="twitter:image" content="https://pacchashipping.in/paccha_road_freight.png" />
+                <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"Service","name":"Road Freight and Inland Transport","serviceType":"Transportation Service","provider":{"@type":"LocalBusiness","name":"Paccha Universal Shipping Line Pvt Ltd","url":"https://pacchashipping.in","telephone":"+91-98413-93916","address":{"@type":"PostalAddress","addressLocality":"Chennai","addressRegion":"Tamil Nadu","postalCode":"600099","addressCountry":"IN"}},"areaServed":["India"],"description":"Reliable PAN India road transport, container trucking, port haulage, and ODC cargo movement."}`}</script>
+                <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does Paccha Shipping provide PAN India transport?","acceptedAnswer":{"@type":"Answer","text":"Yes, we provide road transport and container hauling services across all major cities and states in India."}},{"@type":"Question","name":"Do you handle Over Dimensional Cargo (ODC)?","acceptedAnswer":{"@type":"Answer","text":"Yes, we have flat bed and low bed trailers for handling heavy machinery and over dimensional cargo."}},{"@type":"Question","name":"Can you arrange trucks for factory stuffing?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. We provide timely placement of empty containers at your factory for stuffing and transport them to the port."}}]}`}</script>
             </Helmet>
             <div className="absolute inset-0 bg-gradient-to-b from-brand-primary/10 via-transparent to-transparent pointer-events-none"></div>
 

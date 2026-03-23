@@ -42,10 +42,21 @@ const Warehousing = () => {
     return (
         <div className="min-h-screen bg-[#050a07] pt-32 pb-20 overflow-hidden relative">
             <Helmet>
-                <title>Secure Warehousing & Distribution | Bonded Storage Chennai India</title>
+                <title>Secure Warehousing &amp; Distribution | Bonded Storage Chennai India</title>
                 <meta name="description" content="Bonded and non-bonded warehousing near Chennai seaport and airport. Experts in inventory management, cargo consolidation, and last-mile distribution." />
                 <meta name="keywords" content="warehousing Chennai, bonded storage India, cargo consolidation Chennai, logistics warehouse Chennai, export hub storage" />
                 <link rel="canonical" href="https://pacchashipping.in/services/warehousing" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://pacchashipping.in/services/warehousing" />
+                <meta property="og:title" content="Secure Warehousing &amp; Distribution | Paccha Shipping" />
+                <meta property="og:description" content="Bonded and non-bonded warehousing near Chennai seaport. Cargo consolidation, cross-docking, and distribution." />
+                <meta property="og:image" content="https://pacchashipping.in/paccha_warehouse.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Secure Warehousing &amp; Distribution | Paccha Shipping" />
+                <meta name="twitter:description" content="Bonded &amp; non-bonded warehousing near Chennai port. Safe storage, CFS operations, and distribution." />
+                <meta name="twitter:image" content="https://pacchashipping.in/paccha_warehouse.png" />
+                <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"Service","name":"Warehousing and Distribution","serviceType":"Storage and Warehousing","provider":{"@type":"LocalBusiness","name":"Paccha Universal Shipping Line Pvt Ltd","url":"https://pacchashipping.in","telephone":"+91-98413-93916","address":{"@type":"PostalAddress","addressLocality":"Chennai","addressRegion":"Tamil Nadu","postalCode":"600099","addressCountry":"IN"}},"areaServed":["Chennai","Tamil Nadu","India"],"description":"Secure bonded and non-bonded warehousing, inventory management, and distribution services."}`}</script>
+                <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do you offer bonded warehousing in Chennai?","acceptedAnswer":{"@type":"Answer","text":"Yes, we offer government-licensed bonded warehousing where imported goods can be stored duty-free until clearance."}},{"@type":"Question","name":"Can you handle cargo consolidation (LCL)?","acceptedAnswer":{"@type":"Answer","text":"Yes, our CFS facilities handle efficient consolidation of LCL cargo for multiple shippers into full containers."}},{"@type":"Question","name":"Do you provide last-mile distribution?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. We provide end-to-end solutions including storage, pick-and-pack, and final delivery to distributors or customers."}}]}`}</script>
             </Helmet>
             <div className="absolute inset-0 bg-gradient-to-b from-brand-primary/10 via-transparent to-transparent pointer-events-none"></div>
 

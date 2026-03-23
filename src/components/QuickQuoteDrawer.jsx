@@ -1,21 +1,48 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiX, FiSend, FiCheckCircle } from 'react-icons/fi';
+import { db } from '../firebase/config';
+import { ref, push, set } from 'firebase/database';
 
 const QuickQuoteDrawer = ({ isOpen, onClose }) => {
     const [status, setStatus] = useState('idle');
+    const [formData, setFormData] = useState({
+        name: '',
+        phone: '',
+        service: '',
+        message: ''
+    });
 
-    const handleSubmit = (e) => {
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('loading');
-        // Mock simulation of API push
-        setTimeout(() => {
+
+        try {
+            const newQueryRef = push(ref(db, 'queries'));
+            await set(newQueryRef, {
+                // Map the quick quote fields to fit the Admin dashboard expectation
+                name: formData.name,
+                email: 'N/A (Quick Quote)',
+                phone: formData.phone,
+                message: `[Service: ${formData.service}] ${formData.message}`,
+                status: 'New',
+                createdAt: Date.now()
+            });
+
             setStatus('success');
             setTimeout(() => {
                 setStatus('idle');
+                setFormData({ name: '', phone: '', service: '', message: '' });
                 onClose();
             }, 2000);
-        }, 1500);
+        } catch (error) {
+            console.error("Error submitting quote:", error);
+            setStatus('idle');
+        }
     };
 
     return (
@@ -41,9 +68,9 @@ const QuickQuoteDrawer = ({ isOpen, onClose }) => {
                     >
                         <div className="flex justify-between items-center mb-10">
                             <div>
-                            <h2 className="text-2xl font-bold text-[#1D1D1F]">Get a Free Quote</h2>
-                            <p className="text-[#86868B] text-sm mt-1">Our team responds within a few hours.</p>
-                        </div>
+                                <h2 className="text-2xl font-bold text-[#1D1D1F]">Get a Free Quote</h2>
+                                <p className="text-[#86868B] text-sm mt-1">Our team responds within a few hours.</p>
+                            </div>
                             <button
                                 onClick={onClose}
                                 className="p-2 rounded-full bg-[#F5F5F7] text-[#1D1D1F] hover:bg-[#E5E5EA] transition-colors"
@@ -69,8 +96,11 @@ const QuickQuoteDrawer = ({ isOpen, onClose }) => {
                                     <label htmlFor="qq-name" className="text-[13px] font-semibold text-[#86868B] uppercase tracking-wider">Full Name</label>
                                     <input
                                         id="qq-name"
+                                        name="name"
                                         required
                                         type="text"
+                                        value={formData.name}
+                                        onChange={handleChange}
                                         className="w-full px-4 py-3.5 rounded-xl bg-[#F5F5F7] border border-transparent focus:bg-white focus:border-[#0066CC] focus:ring-4 focus:ring-[#0066CC]/10 transition-all text-[#1D1D1F] outline-none font-medium"
                                         placeholder="Enter your name"
                                     />
@@ -80,8 +110,11 @@ const QuickQuoteDrawer = ({ isOpen, onClose }) => {
                                     <label htmlFor="qq-phone" className="text-[13px] font-semibold text-[#86868B] uppercase tracking-wider">Phone / WhatsApp</label>
                                     <input
                                         id="qq-phone"
+                                        name="phone"
                                         required
                                         type="tel"
+                                        value={formData.phone}
+                                        onChange={handleChange}
                                         className="w-full px-4 py-3.5 rounded-xl bg-[#F5F5F7] border border-transparent focus:bg-white focus:border-[#0066CC] focus:ring-4 focus:ring-[#0066CC]/10 transition-all text-[#1D1D1F] outline-none font-medium"
                                         placeholder="+91 98413 93916"
                                     />
@@ -91,11 +124,14 @@ const QuickQuoteDrawer = ({ isOpen, onClose }) => {
                                     <label htmlFor="qq-service" className="text-[13px] font-semibold text-[#86868B] uppercase tracking-wider">Required Service</label>
                                     <select
                                         id="qq-service"
+                                        name="service"
                                         required
+                                        value={formData.service}
+                                        onChange={handleChange}
                                         className="w-full px-4 py-3.5 rounded-xl bg-[#F5F5F7] border border-transparent focus:bg-white focus:border-[#0066CC] focus:ring-4 focus:ring-[#0066CC]/10 transition-all text-[#1D1D1F] outline-none font-medium appearance-none"
                                         style={{ backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2386868b' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`, backgroundPosition: 'right 0.5rem center', backgroundRepeat: 'no-repeat', backgroundSize: '1.5em 1.5em', paddingRight: '2.5rem' }}
                                     >
-                                        <option value="" disabled selected>Select a service...</option>
+                                        <option value="" disabled>Select a service...</option>
                                         <option value="air-freight">Air Freight</option>
                                         <option value="ocean-freight">Ocean Freight</option>
                                         <option value="customs">Customs Clearance</option>
@@ -108,8 +144,11 @@ const QuickQuoteDrawer = ({ isOpen, onClose }) => {
                                     <label htmlFor="qq-details" className="text-[13px] font-semibold text-[#86868B] uppercase tracking-wider">Cargo Details (Weight, Source, Destination)</label>
                                     <textarea
                                         id="qq-details"
+                                        name="message"
                                         required
                                         rows="4"
+                                        value={formData.message}
+                                        onChange={handleChange}
                                         className="w-full px-4 py-3.5 rounded-xl bg-[#F5F5F7] border border-transparent focus:bg-white focus:border-[#0066CC] focus:ring-4 focus:ring-[#0066CC]/10 transition-all text-[#1D1D1F] outline-none font-medium resize-none"
                                         placeholder="E.g., 500kg from Chennai to Dubai"
                                     ></textarea>

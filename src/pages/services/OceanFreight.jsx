@@ -49,9 +49,20 @@ const OceanFreight = () => {
         <div className="min-h-screen bg-[#050a07] pt-32 pb-20 overflow-hidden relative">
             <Helmet>
                 <title>Ocean Freight FCL LCL Shipping | Global Sea Freight Services Chennai India</title>
-                <meta name="description" content="Cost-effective FCL and LCL ocean freight solutions from Chennai to global ports. Expert container shipping, Bill of Lading documentation, and port-to-door delivery." />
-                <meta name="keywords" content="ocean freight Chennai, sea freight India, FCL shipping, LCL shipping Chennai, container shipping India, shipping company Tamil Nadu" />
+                <meta name="description" content="Cost-effective FCL and LCL ocean freight from Chennai to Dubai, Singapore, USA, Germany &amp; more. Expert container shipping, BoL documentation, door-to-door delivery." />
+                <meta name="keywords" content="ocean freight Chennai, sea freight India, FCL shipping, LCL shipping Chennai, container shipping India, shipping company Tamil Nadu, ocean freight rate India to Dubai" />
                 <link rel="canonical" href="https://pacchashipping.in/services/ocean" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://pacchashipping.in/services/ocean" />
+                <meta property="og:title" content="Ocean Freight FCL &amp; LCL from Chennai | Paccha Shipping" />
+                <meta property="og:description" content="Move large cargo volumes by sea. FCL &amp; LCL ocean freight from Chennai to 50+ global ports. Customs, BoL, and door-to-door included." />
+                <meta property="og:image" content="https://pacchashipping.in/paccha_ocean_freight.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Ocean Freight FCL &amp; LCL from Chennai | Paccha Shipping" />
+                <meta name="twitter:description" content="Cost-effective sea freight from Chennai to Dubai, Singapore, USA, Germany. FCL &amp; LCL. Get a free quote." />
+                <meta name="twitter:image" content="https://pacchashipping.in/paccha_ocean_freight.png" />
+                <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"Service","name":"Ocean Freight FCL LCL Shipping","serviceType":"Freight Forwarding","provider":{"@type":"LocalBusiness","name":"Paccha Universal Shipping Line Pvt Ltd","url":"https://pacchashipping.in","telephone":"+91-98413-93916","address":{"@type":"PostalAddress","addressLocality":"Chennai","addressRegion":"Tamil Nadu","postalCode":"600099","addressCountry":"IN"}},"areaServed":["India","United Arab Emirates","Singapore","Germany","United States","Sri Lanka"],"description":"Full Container Load (FCL) and Less than Container Load (LCL) ocean freight from Chennai port to all major global shipping destinations."}`}</script>
+                <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the ocean freight transit time from Chennai to Dubai?","acceptedAnswer":{"@type":"Answer","text":"The typical transit time for sea freight from Chennai to Dubai is 10–14 days for FCL shipments."}},{"@type":"Question","name":"What is the difference between FCL and LCL shipping?","acceptedAnswer":{"@type":"Answer","text":"FCL means your cargo occupies an entire container. LCL consolidates your cargo with others, ideal for smaller shipments."}},{"@type":"Question","name":"Does Paccha Shipping handle door-to-door ocean freight?","acceptedAnswer":{"@type":"Answer","text":"Yes. We offer complete door-to-door ocean freight including pickup, customs, port handling, ocean transit, destination customs, and final delivery."}},{"@type":"Question","name":"Which ports does Paccha Shipping ship to from Chennai?","acceptedAnswer":{"@type":"Answer","text":"We ship to all major global ports including Dubai, Singapore, Hamburg, Rotterdam, New York, Los Angeles, Colombo, and Nhava Sheva."}},{"@type":"Question","name":"How do I get an ocean freight rate from Chennai?","acceptedAnswer":{"@type":"Answer","text":"Request a free quote on our Contact page or call +91 98413 93916 with your cargo details."}}]}`}</script>
             </Helmet>
             <div className="absolute inset-0 bg-gradient-to-b from-brand-primary/10 via-transparent to-transparent pointer-events-none"></div>
 
