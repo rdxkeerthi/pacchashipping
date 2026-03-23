@@ -28,6 +28,17 @@ const Customers = () => {
     const [testimonials, setTestimonials] = useState([]);
     const [loading, setLoading] = useState(true);
     const [direction, setDirection] = useState(1); // 1 = forward, -1 = back
+    const [isPaused, setIsPaused] = useState(false);
+
+    // Auto-advance every 6 seconds
+    useEffect(() => {
+        if (testimonials.length <= 1 || isPaused) return;
+        const timer = setInterval(() => {
+            setDirection(1);
+            setCurrentIndex(prev => (prev + 1) % testimonials.length);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, [testimonials.length, isPaused, currentIndex]);
 
     // Drag support
     const dragStart = useRef(null);
@@ -190,6 +201,8 @@ const Customers = () => {
                     {/* Card */}
                     <div
                         className="relative select-none cursor-grab active:cursor-grabbing"
+                        onMouseEnter={() => setIsPaused(true)}
+                        onMouseLeave={() => setIsPaused(false)}
                         onPointerDown={handlePointerDown}
                         onPointerUp={handlePointerUp}
                         onPointerLeave={(e) => { if (dragStart.current !== null) handlePointerUp(e); }}
