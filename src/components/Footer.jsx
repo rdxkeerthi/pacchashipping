@@ -17,7 +17,7 @@ const Footer = () => {
                         </div>
                     </Link>
                     <p className="text-gray-400 text-[15px] mb-4 max-w-xs leading-relaxed font-medium">
-                        Paccha Universal Shipping Line Pvt. Ltd. — Your trusted export-import and freight forwarding partner since 2009. Chennai, India.
+                        Paccha Universal Shipping Line Pvt. Ltd. — Your trusted export-import and freight forwarding partner since 2016. Chennai, India.
                     </p>
                     <p className="text-gray-500 text-xs mb-6">IEC Holder · Custom License Holder · DGFT Registered</p>
                     <div className="flex gap-4">
@@ -78,7 +78,7 @@ const Footer = () => {
                             </div>
                             <div>
                                 <a href="tel:+919841393916" className="block hover:text-white transition-colors">+91 98413 93916</a>
-                                <a href="tel:+919345021647" className="block hover:text-white transition-colors">+91 9345021647</a>
+                                <a href="tel:+919345021647" className="block hover:text-white transition-colors">+91 93450 21647</a>
                             </div>
                         </li>
                         <li className="flex gap-4 items-center">
