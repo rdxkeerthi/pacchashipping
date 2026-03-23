@@ -10,7 +10,7 @@ const Footer = () => {
                 {/* Brand Info */}
                 <div className="col-span-1 md:col-span-1">
                     <Link to="/" className="flex items-center gap-3 mb-6 group">
-                        <img src="/paccha_logo.png" alt="Paccha Shipping Logo" className="w-14 h-14 rounded-full object-cover border-2 border-white/20 shadow-lg group-hover:scale-110 transition-transform" />
+                        <div className="w-5 h-5 rounded-full bg-red-600 shadow-[0_0_20px_rgba(220,38,38,0.6)] group-hover:scale-125 transition-transform" />
                         <div>
                             <span className="font-bold text-2xl tracking-tighter text-white block">PACCHA</span>
                             <span className="text-xs text-gray-500 tracking-wider">Universal Shipping Line</span>

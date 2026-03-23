@@ -51,7 +51,7 @@ const Navbar = () => {
                 <div className="max-w-[1400px] mx-auto px-6 flex justify-between items-center">
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-3 z-50 group">
-                        <img src="/paccha_logo.png" alt="Paccha Shipping Logo" className="w-11 h-11 rounded-full object-cover border-2 border-white/20 shadow-lg group-hover:scale-110 transition-transform" />
+                        <div className="w-4 h-4 rounded-full bg-red-600 shadow-[0_0_15px_rgba(220,38,38,0.5)] group-hover:scale-125 transition-transform" />
                         <span className="font-bold text-2xl tracking-tighter text-white">
                             PACCHA
                         </span>
